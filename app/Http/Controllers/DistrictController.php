@@ -2,24 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreCityRequest;
-use App\Http\Requests\UpdateCityRequest;
-use App\Models\City;
-use App\Models\District;
-use App\Models\Province;
+use App\Models\district;
+use App\Http\Requests\StoredistrictRequest;
+use App\Http\Requests\UpdatedistrictRequest;
 
-class CityController extends Controller
+class DistrictController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $province = Province::all();
-        $city = City::all();
-        $district = District::all();
-
-        return response()->view('city.index', compact('province', 'city', 'district'));
+        //
     }
 
     /**
@@ -33,7 +27,7 @@ class CityController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreCityRequest $request)
+    public function store(StoredistrictRequest $request)
     {
         //
     }
@@ -41,7 +35,7 @@ class CityController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(City $city)
+    public function show(district $district)
     {
         //
     }
@@ -49,7 +43,7 @@ class CityController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(City $city)
+    public function edit(district $district)
     {
         //
     }
@@ -57,7 +51,7 @@ class CityController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCityRequest $request, City $city)
+    public function update(UpdatedistrictRequest $request, district $district)
     {
         //
     }
@@ -65,7 +59,7 @@ class CityController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(City $city)
+    public function destroy(district $district)
     {
         //
     }
